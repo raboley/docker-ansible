@@ -142,3 +142,17 @@ the standard way to do this is to create serializers in a file called serializer
 ### Views
 
 Views are the http requests that the view makes to populate itself. These are added in the view.py file. We will add a view to create the todo items in the DB, as well as a command that will delete all the todo items easily.
+
+### Routing
+
+Routing is using regular expression to send people to specific pages based on the url. The video says to add
+
+```py
+url(r'^', include('todo.urls')),
+```
+
+but it seems like the include function may be depricated or something, since the admin path doesn't have it in my version, but does in the video version. 
+
+I figured out that include is a thing that can be added from some package, so I added it to the admin and non-admin routes.
+
+The real logic is setup in the urls.py file that is in the todo folder. that creates all the actual logic for what to do when you hit a route.

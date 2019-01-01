@@ -62,3 +62,41 @@ next create a new django project
 ``` bash
 django-admin startproject todobackend
 ```
+
+### Python virtual environments
+
+They are a best practice for python, and allow you to have multiple versions of packages installed on the same machine. First install the virtual environemnt package
+
+``` bash
+pip install virtualenv
+```
+
+then create a virtual environment, in a folder called venv
+
+``` bash
+virtualenv venv
+```
+
+Normally the virtual environment would be outside of source control, but this is inside, but ignored for convenience.
+
+now activate the virtual environment:
+
+``` bash
+source venv/bin/activate
+```
+
+now install all 3rd party packages using pip.
+
+``` bash
+pip install pip --upgrade
+pip install django==1.9
+pip install djangorestframework==3.3
+pip install django-cors-headers==1.1
+```
+
+add an app in django that will be our todo app in the src folder.
+
+``` bash
+cd src
+python manage.py startapp todo
+```

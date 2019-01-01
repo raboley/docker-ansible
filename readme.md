@@ -156,3 +156,13 @@ but it seems like the include function may be depricated or something, since the
 I figured out that include is a thing that can be added from some package, so I added it to the admin and non-admin routes.
 
 The real logic is setup in the urls.py file that is in the todo folder. that creates all the actual logic for what to do when you hit a route.
+
+### Running the application
+
+to run the application use the manage runserver command
+
+```bash
+python manage.py runserver
+```
+
+it should give the server url, so then browse to the url. I found a bug! Misspelled Args in the view file, updated that and it works now!

@@ -14,7 +14,7 @@ class TodoItemViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         # Save instance to get primary key and then update URL
         instance = serializer.save()
-        instance.url = reverse('todoitem-detail', arges=[instance.pk], request=self.request)
+        instance.url = reverse('todoitem-detail', args=[instance.pk], request=self.request)
         instance.save()
     
     #delete all todo items

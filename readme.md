@@ -133,3 +133,8 @@ python manage.py migrate
 
 this will show some db stuff, and create a db.sqlite3 folder in the src folder. This hosts the model database for the application.
 
+### Serializers
+
+We created the model and database, but now we have to create a serialzer to tell how it should deserialize and serialize objects between our web commands.
+
+the standard way to do this is to create serializers in a file called serializers.py, we will do that in the todo folder.

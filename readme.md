@@ -100,3 +100,8 @@ add an app in django that will be our todo app in the src folder.
 cd src
 python manage.py startapp todo
 ```
+
+1. then add the new project to the settings.py file in our todobackend folder.
+1. update the middle ware to include cors (order is important)
+1. allow all request to come through CORS (not recommended for production)
+

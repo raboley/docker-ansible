@@ -105,3 +105,31 @@ python manage.py startapp todo
 1. update the middle ware to include cors (order is important)
 1. allow all request to come through CORS (not recommended for production)
 
+### Creating Models
+
+Models are like classes for python. The model created here is a simple one called TodoItem with 4 fields.
+
+``` python
+class TodoItem(models.Model):
+    title = models.CharField(max_length=256, null=True, blank=True)
+    completed = models.BooleanField(blank=True, default=False)
+    url = models.CharField(max_length=256, null=True, blank=True)
+    order = models.IntegerField(null=True, blank=True)
+```
+
+Next we can create the DB schema now that we have a model. (src)
+
+``` bash
+python manage.py makemigrations todo
+```
+
+this creates the migrations folder. as the model changes, you can create incremental changes by just re-running the makemigrations command.
+
+now to apply those changes run the migrate command (make sure you are in the venv virtual environemnt)
+
+``` bash
+python manage.py migrate
+```
+
+this will show some db stuff, and create a db.sqlite3 folder in the src folder. This hosts the model database for the application.
+

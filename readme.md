@@ -138,3 +138,7 @@ this will show some db stuff, and create a db.sqlite3 folder in the src folder. 
 We created the model and database, but now we have to create a serialzer to tell how it should deserialize and serialize objects between our web commands.
 
 the standard way to do this is to create serializers in a file called serializers.py, we will do that in the todo folder.
+
+### Views
+
+Views are the http requests that the view makes to populate itself. These are added in the view.py file. We will add a view to create the todo items in the DB, as well as a command that will delete all the todo items easily.
